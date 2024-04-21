@@ -9,13 +9,12 @@ export default function App() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // Simulate loading for 5 seconds
+
     const timeout = setTimeout(() => {
       setLoaded(true);
-      setLoading(false);
     }, 5000);
 
-    // Clear the timeout when component unmounts
+
     return () => clearTimeout(timeout);
   }, []);
 
